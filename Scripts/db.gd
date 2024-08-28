@@ -41,8 +41,9 @@ func join_room(room_id, peer_id):
 		rooms[room_id] = blank_room_template.duplicate(true)
 	rooms[room_id]["players"][peer_id] = {
 		"position": {"x":0, "y":0}, 
-		"velocity": {"x":0, "y":0}
-		}
+		"velocity": {"x":0, "y":0},
+		"attacking": false
+	}
 	waiting_room.erase(peer_id)
 	players[str(peer_id)] = room_id
 
